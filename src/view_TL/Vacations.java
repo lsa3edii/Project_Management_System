@@ -80,6 +80,11 @@ public class Vacations extends javax.swing.JFrame {
 
         search.setFont(new java.awt.Font("Century Schoolbook", 1, 20)); // NOI18N
         search.setForeground(new java.awt.Color(61, 142, 242));
+        search.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                searchKeyReleased(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Century Schoolbook", 3, 24)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(61, 142, 242));
@@ -269,6 +274,10 @@ public class Vacations extends javax.swing.JFrame {
         } else
             JOptionPane.showMessageDialog(null, "Please Select one row!");
     }//GEN-LAST:event_deleteMouseClicked
+
+    private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
+        show.DataInTableAfterSearch2(search.getText(), vacationTable);
+    }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

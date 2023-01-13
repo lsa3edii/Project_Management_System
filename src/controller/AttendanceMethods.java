@@ -4,7 +4,7 @@ import java.sql.*;
 import javax.swing.JTable;
 import javax.swing.JOptionPane;
 
-public class AttendanceMethods implements AttendanceRepo{
+public class AttendanceMethods implements AttendanceRepo {
     
     private Connection connection = Database.connect();
     private ResultSet result = null;

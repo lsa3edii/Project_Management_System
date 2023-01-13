@@ -16,8 +16,12 @@ create table project_manager (
 	name varchar(20) not null,
 	password varchar(20) not null,
 	position varchar(20) not null,
+	admin_id int,
 
-	--constraint project_manager_pk primary key (pm_id),
+	--constraint project_manager_pk primary key (id),
+
+	--constraint admin_manager_fk foreign key (admin_id)
+	--references admin (id)
 );
 
 alter table project_manager
@@ -55,11 +59,15 @@ create table team_leader (
 	password varchar(20) not null,
 	position varchar(20) not null,
 	pm_id int,
+	admin_id int,
 
 	constraint team_leader_pk primary key (id),
 
 	constraint manager_leader_fk foreign key (pm_id)
-	references project_manager (id)
+	references project_manager (id),
+
+	--constraint admin_leader_fk foreign key (admin_id)
+	--references admin (id)
 );
 
 create table employee (
@@ -70,6 +78,7 @@ create table employee (
 	penalty int,
 	tl_id int,
 	pm_id int,
+	admin_id int,
 
 	constraint employee_manager_pk primary key (id),
 
@@ -77,7 +86,11 @@ create table employee (
 	references team_leader (id),
 
 	constraint manager_employee_fk foreign key (pm_id)
-	references project_manager (id)
+	references project_manager (id),
+
+	--constraint admin_employee_fk foreign key (admin_id)
+	--references admin (id)
+
 );
 
 create table projects (

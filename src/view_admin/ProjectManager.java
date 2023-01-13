@@ -425,7 +425,7 @@ public class ProjectManager extends javax.swing.JFrame {
     }//GEN-LAST:event_PMTableMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        show.DataInTableAfterSearch("project_manager", search.getText(), PMTable);
+        show.DataInTableAfterSearch1("project_manager", search.getText(), PMTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

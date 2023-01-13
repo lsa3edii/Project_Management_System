@@ -396,12 +396,8 @@ public class AssignTasks extends javax.swing.JFrame {
     }//GEN-LAST:event_insertMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        //        show.DataInTableAfterSearch("tasks", search.getText(), projectTable);
-
-        DefaultTableModel model = (DefaultTableModel) taskTable.getModel();
-        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
-        taskTable.setRowSorter(filter);
-        filter.setRowFilter(RowFilter.regexFilter(search.getText().trim()));
+        //show.DataInTableAfterSearch1("tasks", search.getText(), projectTable);
+        show.DataInTableAfterSearch2(search.getText(), taskTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

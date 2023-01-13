@@ -1,8 +1,8 @@
 package controller;
 
 import java.sql.*;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
+import javax.swing.*;
+import javax.swing.table.*;
 import net.proteanit.sql.DbUtils;
 
 public class ShowData {
@@ -70,7 +70,7 @@ public class ShowData {
         return sql;
     }
     
-    public void DataInTableAfterSearch(String tableName, String search, JTable table) {
+    public void DataInTableAfterSearch1(String tableName, String search, JTable table) {
         sql = "select * from " + tableName + " where id like '%" + search + "%'";
         
         try {
@@ -81,6 +81,13 @@ public class ShowData {
         } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error!!", JOptionPane.ERROR_MESSAGE);
         }
+    }    
+    
+    public void DataInTableAfterSearch2(String search, JTable table) {
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
+        table.setRowSorter(filter);
+        filter.setRowFilter(RowFilter.regexFilter(search.trim()));
     }    
     
 }

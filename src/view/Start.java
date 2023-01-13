@@ -140,6 +140,7 @@ public class Start extends javax.swing.JFrame {
             for (int i = 0; i <= 100; i++) {
                 Thread.sleep(25);
                 percentage.setText(i + "%");
+                //progressBar.setValue(i);
             }
             new Login().setVisible(true);
             this.dispose();

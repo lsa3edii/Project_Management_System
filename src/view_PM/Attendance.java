@@ -224,10 +224,7 @@ public class Attendance extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        DefaultTableModel model = (DefaultTableModel) attendanceTable.getModel();
-        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
-        attendanceTable.setRowSorter(filter);
-        filter.setRowFilter(RowFilter.regexFilter(search.getText().trim()));
+        show.DataInTableAfterSearch2(search.getText(), attendanceTable);
     }//GEN-LAST:event_searchKeyReleased
 
     private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked

@@ -375,12 +375,8 @@ public class AssignProject extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-//        show.DataInTableAfterSearch("projects", search.getText(), projectTable);
-
-        DefaultTableModel model = (DefaultTableModel) projectTable.getModel();
-        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
-        projectTable.setRowSorter(filter);
-        filter.setRowFilter(RowFilter.regexFilter(search.getText().trim()));
+        //show.DataInTableAfterSearch1("projects", search.getText(), projectTable);
+        show.DataInTableAfterSearch2(search.getText(), projectTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

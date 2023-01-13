@@ -440,7 +440,7 @@ public class TeamLeader extends javax.swing.JFrame {
     }//GEN-LAST:event_TLTableMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        show.DataInTableAfterSearch("team_leader", search.getText(), TLTable);
+        show.DataInTableAfterSearch1("team_leader", search.getText(), TLTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

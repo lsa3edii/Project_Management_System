@@ -187,7 +187,7 @@ public class Projects extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        show.DataInTableAfterSearch("projects", search.getText(), projectTable);
+        show.DataInTableAfterSearch1("projects", search.getText(), projectTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

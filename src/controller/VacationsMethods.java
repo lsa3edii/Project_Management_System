@@ -3,7 +3,7 @@ package controller;
 import java.sql.*;
 import javax.swing.*;
 
-public class VacationsMethods implements VacationsRepo{
+public class VacationsMethods implements VacationsRepo {
     
     private Connection connection = Database.connect();
     private String sql;

@@ -3,7 +3,7 @@ package controller;
 import java.sql.*;
 import javax.swing.*;
 
-public class ReportsMethods implements ReportsRepo{
+public class ReportsMethods implements ReportsRepo {
     
     private Connection connection = Database.connect();
     private ResultSet result = null;

@@ -311,10 +311,7 @@ public class ProjectProgress extends javax.swing.JFrame {
     }//GEN-LAST:event_updateMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        DefaultTableModel model = (DefaultTableModel) progressTable.getModel();
-        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
-        progressTable.setRowSorter(filter);
-        filter.setRowFilter(RowFilter.regexFilter(search.getText().trim()));
+        show.DataInTableAfterSearch2(search.getText(), progressTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

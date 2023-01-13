@@ -253,10 +253,7 @@ public class Penalties extends javax.swing.JFrame {
     }//GEN-LAST:event_sendMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        DefaultTableModel model = (DefaultTableModel) penaltiesTable.getModel();
-        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
-        penaltiesTable.setRowSorter(filter);
-        filter.setRowFilter(RowFilter.regexFilter(search.getText().trim()));
+        show.DataInTableAfterSearch2(search.getText(), penaltiesTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

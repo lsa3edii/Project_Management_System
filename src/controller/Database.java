@@ -15,7 +15,9 @@ public class Database {
     public static Connection connect() {
         url = "jdbc:sqlserver://LSA3EDII\\SQLEXPRESS;databaseName=ProjectManagement;"
                 + "integratedSecurity=true;encrypt=false";
-        
+
+        //url = "jdbc:sqlite:PMS.db";
+
         try {
             connection = DriverManager.getConnection(url);
             return connection;

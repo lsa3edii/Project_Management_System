@@ -4,7 +4,7 @@ import java.sql.*;
 import javax.swing.JTable;
 import javax.swing.JOptionPane;
 
-public class TasksMethods implements ProjectsTasksRepo{
+public class TasksMethods implements ProjectsTasksRepo {
     
     private Connection connection = Database.connect();
     private String sql;

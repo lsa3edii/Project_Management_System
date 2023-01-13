@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 //import net.proteanit.sql.DbUtils;
 
-public class UsersMethods implements UsersRepo{
+public class UsersMethods implements UsersRepo {
 
     private Connection connection = Database.connect();
     private Statement statement = null;

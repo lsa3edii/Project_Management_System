@@ -205,10 +205,7 @@ public class TaskStates extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        DefaultTableModel model = (DefaultTableModel) taskTable.getModel();
-        TableRowSorter <DefaultTableModel> filter = new TableRowSorter <DefaultTableModel>(model);
-        taskTable.setRowSorter(filter);
-        filter.setRowFilter(RowFilter.regexFilter(search.getText().trim()));
+        show.DataInTableAfterSearch2(search.getText(), taskTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {

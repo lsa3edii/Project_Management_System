@@ -3,7 +3,7 @@ package controller;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class AdminMethods implements AdminRepo{
+public class AdminMethods implements AdminRepo {
     
     private Connection connection = Database.connect();
     private ResultSet result = null;

@@ -1,7 +1,8 @@
 package view_admin;
 
 import controller.*;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import javax.swing.table.*;
 
 public class Employees extends javax.swing.JFrame {
 
@@ -458,7 +459,8 @@ public class Employees extends javax.swing.JFrame {
     }//GEN-LAST:event_employeeTableMouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
-        show.DataInTableAfterSearch("employee", search.getText(), employeeTable);
+        //show.DataInTableAfterSearch("employee", search.getText(), employeeTable);
+        show.DataInTableAfterSearch2(search.getText(), employeeTable);
     }//GEN-LAST:event_searchKeyReleased
 
     public static void main(String args[]) {
